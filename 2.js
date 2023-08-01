@@ -108,14 +108,14 @@ let sentence2 = "I hope this course is not full of jargon_";
 print(sentence2.includes("_jargon_"));
 
 // 7. Generate a random number between 0 and 100 inclusively.
-print(Math.ceil(Math.random() *100));
+print(Math.ceil(Math.random() * 100));
 // 8. Generate a random number between 50 and 100 inclusively.
-print(Math.ceil((Math.random() *(100-50))+50));
+print(Math.ceil(Math.random() * (100 - 50) + 50));
 // 9. Generate a random number between 0 and 255 inclusively.
-print(Math.ceil(Math.random() *255));
+print(Math.ceil(Math.random() * 255));
 // 10. Access the 'JavaScript' string characters using a random number.
-let java = "javaScript"
-let index = Math.floor(Math.random()*java.length);
+let java = "javaScript";
+let index = Math.floor(Math.random() * java.length);
 print(java[index]);
 // 11. Use console.log() and escape characters to print the following pattern.
 
@@ -128,21 +128,44 @@ print(java[index]);
 //     ```
 print(
   `\t js \n 1 1 1 1 \n 2 1 2 4 8 \n 3 1 3 9 27 \n 4 1 4 16 64 \n 5 1 5 25 125 \n`
-)
+);
 // 12.  Use __substr__ to slice out the phrase __because because because__ from the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
- let sentence3 = 'You cannot end a sentence with because because because is a conjunction';
-    print(sentence3.indexOf("be"))
-    print(sentence3.lastIndexOf("because"));
-    print(sentence3.substr(31,24));
+let sentence3 =
+  "You cannot end a sentence with because because because is a conjunction";
+print(sentence3.indexOf("be"));
+print(sentence3.lastIndexOf("because"));
+print(sentence3.substr(31, 24));
 
 // ### Exercises: Level 3
 
 // 1. 'Love is the best thing in this world. Some found their love and some are still looking for their love.' Count the number of word __love__ in this sentence.
+let sentence4 =
+  "Love is the best thing in this world. Some found their love and some are still looking for their love.";
+print(sentence4.match(/love/gi).length);
 // 2. Use __match()__ to count the number of all __because__ in the following sentence:__'You cannot end a sentence with because because because is a conjunction'__
+let sentence5 =
+  "You cannot end a sentence with because because because is a conjunction";
+print(sentence5.match(/because/g));
 // 3. Clean the following text and find the most frequent word (hint, use replace and regular expressions).
 
-//     ```js
-//         const sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
-//     ```
+const sentence6 =
+  "%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching";
+let clean = sentence6.replace(/[@%$#;&!,]/gi, "");
+print(clean);
 
 // 4. Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+let sentece7 =
+  "He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.";
+let senteceArray = sentece7.split(" ");
+let num = senteceArray.filter((element) => {
+  return parseInt(element);
+});
+let int = num.map((element) => {
+  return parseInt(element);
+});
+let total = 0;
+for (let index = 0; index < int.length; index++) {
+  total += int[index];
+  print(typeof int[index]);
+}
+print(total);
