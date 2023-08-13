@@ -168,24 +168,23 @@ print(date.getTime());
 // 1. Declare two variables _myAge_ and _yourAge_ and assign them initial values and myAge and yourAge.
 
 //    ```js
-//    let myAge = 250
-//    let yourAge = 25
+let myAge = 250;
+let yourAge = 25;
 //    ```
+print(`I'm ${myAge - yourAge} older than you`);
 
-//    ```sh
-//    I am 225 years older than you.
-//    ```
 
 // 1. Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
 
 //     ```sh
-
-//     Enter birth year: 1995
-//     You are 25. You are old enough to drive
-
-//     Enter birth year: 2005
-//     You are 15. You will be allowed to drive after 3 years.
-//     ```
+let bornYear = prompt("Enter they year you was born");
+let atualYear = date.getFullYear();
+console.log(atualYear);
+if (atualYear - bornYear < 18) {
+  alert(`I'm sorry you are ${atualYear - bornYear} years old, You can't drive`);
+} else {
+  alert(`Yes ! You are ${atualYear - bornYear} years old, you can drive `);
+}
 
 // 1. Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
 
