@@ -173,7 +173,6 @@ let yourAge = 25;
 //    ```
 print(`I'm ${myAge - yourAge} older than you`);
 
-
 // 1. Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
 
 //     ```sh
@@ -187,6 +186,9 @@ if (atualYear - bornYear < 18) {
 }
 
 // 1. Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
+let yearsLived = prompt("Enter number of years you lived: ");
+let secondslived = yearsLived * 31536000;
+console.log(`you lived ${secondslived} seconds`);
 
 //    ```sh
 //    Enter number of years you live: 100
