@@ -199,6 +199,8 @@ console.log(`you lived ${secondslived} seconds`);
 //    1. YYYY-MM-DD HH:mm
 //    2. DD-MM-YYYY HH:mm
 //    3. DD/MM/YYYY HH:mm
+date = new Date(getFullYear(), getMonth());
+console.log(date);
 
 // ### Exercises: Level 3
 
