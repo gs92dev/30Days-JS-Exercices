@@ -61,18 +61,61 @@ number % 2 == 0
 
 // 1. Write a code which  can give grades to students according to theirs scores:
 //    - 80-100, A
-//    - 70-89, B
+//    - 70-79, B
 //    - 60-69, C
 //    - 50-59, D
 //    - 0-49, F
-// 1. Check if the season is Autumn, Winter, Spring or Summer.
+let score = prompt("Please enter your score");
+
+switch (true) {
+  case score >= 80:
+    console.log("Your grade is A");
+    break;
+  case score >= 70:
+    console.log("Your grade is B");
+    break;
+  case score >= 60:
+    console.log("Your grade is C");
+    break;
+  case score >= 50:
+    console.log("Your grade is D");
+    break;
+
+  default:
+    console.log("Your grade is  F");
+    break;
+}
+
+// 2. Check if the season is Autumn, Winter, Spring or Summer.
 //    If the user input is :
 //    - September, October or November, the season is Autumn.
 //    - December, January or February, the season is Winter.
 //    - March, April or May, the season is Spring
 //    - June, July or August, the season is Summer
-// 1. Check if a day is weekend day or a working day. Your script will take day as an input.
+let month = prompt("Please enter the month");
+switch (month.toLocaleLowerCase()) {
+  case "september" || "october" || "november":
+    console.log("Autumn");
+    break;
+  case "december" || "january" || "february":
+    console.log("Winter");
+    break;
 
+  case "march" || "april" || "may":
+    console.log("Spring");
+    break;
+  default:
+    console.log("Summer");
+    break;
+}
+// 3. Check if a day is weekend day or a working day. Your script will take day as an input.
+let day = prompt("Please enter the day");
+day = day.toLocaleLowerCase();
+if (day === "saturday" || day === "sunday") {
+  console.log("Weekend");
+} else {
+  console.log("Working Day");
+}
 // ```sh
 //     What is the day  today? Saturday
 //     Saturday is a weekend.
@@ -105,6 +148,6 @@ number % 2 == 0
 //     February has 28 days.
 //   ```
 
-// 1. Write a program which tells the number of days in a month, now consider leap year.
+// 2. Write a program which tells the number of days in a month, now consider leap year.
 
 // 🎉 CONGRATULATIONS ! 🎉
