@@ -109,13 +109,6 @@ switch (month.toLocaleLowerCase()) {
     break;
 }
 // 3. Check if a day is weekend day or a working day. Your script will take day as an input.
-let day = prompt("Please enter the day");
-day = day.toLocaleLowerCase();
-if (day === "saturday" || day === "sunday") {
-  console.log("Weekend");
-} else {
-  console.log("Working Day");
-}
 // ```sh
 //     What is the day  today? Saturday
 //     Saturday is a weekend.
@@ -129,6 +122,13 @@ if (day === "saturday" || day === "sunday") {
 //     What is the day today? FrIDAy
 //     Friday is a working day.
 //   ```
+let day = prompt("Please enter the day");
+day = day.toLocaleLowerCase();
+if (day === "saturday" || day === "sunday") {
+  console.log("Weekend");
+} else {
+  console.log("Working Day");
+}
 
 // ### Exercises: Level 3
 
@@ -148,6 +148,24 @@ if (day === "saturday" || day === "sunday") {
 //     February has 28 days.
 //   ```
 
-// 2. Write a program which tells the number of days in a month, now consider leap year.
+let monthh = prompt("Enter a month");
+monthh = monthh.toLowerCase();
+switch (monthh) {
+  case "january" ||
+    "march" ||
+    "may" ||
+    "july" ||
+    "august" ||
+    "october" ||
+    "december":
+    console.log("This month has 31 days");
+    break;
+  case "april" || "june" || "september" || "november":
+    console.log("This month has 30 days");
+    break;
+  default:
+    console.log("This month has 28 days");
+    break;
+}
 
 // 🎉 CONGRATULATIONS ! 🎉
