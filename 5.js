@@ -24,16 +24,25 @@ print(itCompanies);
 print(itCompanies.length-1);
 
 // 11. Change each company name  to uppercase one by one and print them out
+let it = itCompanies.map(elem=>elem.toUpperCase())
+print(it)
 
 // 12. Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+print(itCompanies.toString())
 // 13. Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is _not found_
+itCompanies.includes("F")?print("Google"):print("_not found_")
 // 14. Filter out companies which have more than one 'o' without the filter method
 // 15. Sort the array using _sort()_ method
+print(itCompanies.sort())
 // 16. Reverse the array using _reverse()_ method
+print(itCompanies.reverse())
 // 17. Slice out the first 3 companies from the array
+print(itCompanies.slice(0, 3))
 // 18. Slice out the last 3 companies from the array
-// 19. Slice out the middle IT company or companies from the array
+print(itCompanies.slice(itCompanies.length -4,itCompanies.length-1))
 // 20. Remove the first IT company from the array
+let itC= itCompanies.shift()
+print(itC)
 // 21. Remove the middle IT company or companies from the array
 // 22. Remove the last IT company from the array
 // 23. Remove all IT companies
