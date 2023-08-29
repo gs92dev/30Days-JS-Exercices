@@ -45,7 +45,17 @@ let itC= itCompanies.shift()
 print(itC)
 // 21. Remove the middle IT company or companies from the array
 // 22. Remove the last IT company from the array
+print(itCompanies)
+itCompanies.pop()
+print(itCompanies)
+const numbers = [1, 2, 3, 4, 5, 6];
+print(numbers)
+numbers.splice(3, 3, 7, 8, 9);
+console.log(numbers.splice(3, 3, 7, 8, 9));
 // 23. Remove all IT companies
+print(itCompanies)
+itCompanies.splice();
+print(itCompanies)
 
 // ### Exercise: Level 2
 
