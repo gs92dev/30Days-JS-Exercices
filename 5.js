@@ -59,16 +59,18 @@ print(itCompanies)
 
 // ### Exercise: Level 2
 
-// 1. Create a separate countries.js file and store the countries array in to this file, create a separate file web_techs.js and store the webTechs array in to this file. Access both file in main.js file
+
 // 1. First remove all the punctuations and change the string to array and count the number of words in the array
 
 //     ```js
     let text ='I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
-    text.replace(".","")
-    print(text)
-    let arrText = text.split(' ')
+     text = text.replaceAll(".","")
+     print(text)
+     text = text.replaceAll(",","")
+      print(text)
+      text = text.split(' ')
    
-    print(arrText.length)
+    print(text.length)
 //     console.log(words)
 //     console.log(words.length)
 //     ```
@@ -81,44 +83,44 @@ print(itCompanies)
 
 // 1. In the following shopping cart add, remove, edit items
 
-//     ```js
-//     const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
-//     ```
+    const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
 
 //    - add 'Meat' in the beginning of your shopping cart if it has not been already added
+  shoppingCart.unshift("Meat")
+  
 //    - add Sugar at the end of you shopping cart if it has not been already added
+shoppingCart.push("Sugar")
+print(shoppingCart)
 //    - remove 'Honey' if you are allergic to honey
+let indexHoney = shoppingCart.indexOf("Honey")
+print(indexHoney)
+shoppingCart.splice(indexHoney, 1)
+print(shoppingCart)
 //    - modify Tea to 'Green Tea'
-// 1. In countries array check if 'Ethiopia' exists in the array if it exists print 'ETHIOPIA'. If it does not exist add to the countries list.
-// 1. In the webTechs array check if Sass exists in the array  and if it exists print 'Sass is a CSS preprocess'. If it does not exist add Sass to the array and print the array.
+shoppingCart.splice(shoppingCart.indexOf("Tea"), 1, "Green tea")
+print(shoppingCart)
+
 // 1. Concatenate the following two variables and store it in a fullStack variable.
 
-//     ```js
-//     const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
-//     const backEnd = ['Node','Express', 'MongoDB']
 
-//     console.log(fullStack)
-//     ```
+    const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+    const backEnd = ['Node','Express', 'MongoDB']
+    const fullStack = frontEnd.concat(backEnd)
 
-//     ```sh
-//     ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"]
-//     ```
+    console.log(fullStack)
 
 // ### Exercise: Level 3
 
 // 1. The following is an array of 10 students ages:
 
-//     ```js
-//     const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
-//     ```
+
+    const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 
 //     - Sort the array and find the min and max age
+ ages.sort();
+ print(`The youger student is ${ages[0]} and the oldest is student ${ages[ages.length - 1]}`)
 //     - Find the median age(one middle item or two middle items divided by two)
 //     - Find the average age(all items divided by number of items)
-//     - Find the range of the ages(max minus min)
-//     - Compare the value of (min - average) and (max - average), use _abs()_ method
-// 1.Slice the first ten countries from the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js)
-// 1. Find the middle country(ies) in the [countries array](https://github.com/Asabeneh/30DaysOfJavaScript/tree/master/data/countries.js)
-// 2. Divide the countries array into two equal arrays if it is even.  If countries array is not even , one more country for the first half.
+
 
 // 🎉 CONGRATULATIONS ! 🎉
