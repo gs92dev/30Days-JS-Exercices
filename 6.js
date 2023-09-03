@@ -108,13 +108,36 @@ console.log(odd);
 //     ```
 
 // 12. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. Print sum of evens and sum of odds as array
-
+let numArray = new Array();
+numArray.push(odd);
+numArray.push(even);
+console.log(numArray);
 //     ```sh
 //       [2550, 2500]
 //     ```
 
 // 13. Develop a small script which generate array of 5 random numbers
+let randomArray = new Array();
+for (let i = 1; i <= 5; i++) {
+  randomArray.push(Math.floor(Math.random() * 10));
+}
+console.log(randomArray);
 // 14. Develop a small script which generate array of 5 random numbers and the numbers must be unique
+let uniqArray = new Array();
+let ii = 0;
+while (ii < 5) {
+  function random() {
+    return Math.ceil(Math.random() * 10);
+  }
+  let randomNumber = random();
+  if (uniqArray.includes(randomNumber)) {
+    random();
+  } else {
+    uniqArray.push(randomNumber);
+    ii++;
+  }
+}
+console.log(uniqArray + " Unique");
 // 15. Develop a small script which generate a six characters random id:
 
 //     ```sh
