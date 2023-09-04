@@ -44,6 +44,11 @@ const mernStack = ["MongoDB", "Express", "React", "Node"];
 // }while (j <= 10)
 
 // 4. Write a loop that makes the following pattern using console.log():
+let hashtag = "#";
+console.log(hashtag);
+for (let index = 0; index < 7; index++) {
+  console.log(hashtag);
+}
 
 //    ```js
 //        #
@@ -140,6 +145,12 @@ while (ii < 5) {
 console.log(uniqArray + " Unique");
 // 15. Develop a small script which generate a six characters random id:
 
+let randArr = new Array();
+for (let index = 0; index <= 6; index++) {
+  let randomCharacter = String.fromCharCode(Math.floor(Math.random() * 128));
+  randArr.push(randomCharacter)
+}
+console.log(randArr.join(""));
 //     ```sh
 //     5j2khz
 //     ```
