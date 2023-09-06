@@ -186,26 +186,52 @@ console.log(code);
 
 
 // 4. In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
+let land = new Array();
+for (let country of countries) {
+  if (country.includes('land')){
+    land.push(country);
+  }
+}
+console.log(land);
 
-
-//     ```sh
-//     ['Finland','Ireland', 'Iceland']
-//     ```
 
 // 5. In above countries array, check if there is  a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'.
+let ia = new Array();
+for (let country of countries) {
+  if (country.includes('ia')){
+    ia.push(country);
+  }
+  else{
+    console.log(country);
+  }
+}
+console.log(ia);
 
 //     ```sh
 //     ['Albania', 'Bolivia','Ethiopia']
 //     ```
 
 // 6. Using the above countries array, find the country containing the biggest number of characters.
+let biggestCountry;
+for (let i = 1; i < countries.length; i++) {
+  if (countries[i].length > countries[i-1].length) {
+    biggestCountry = countries[i];
+  }
+}
 
 //       ```sh
 //       Ethiopia
 //       ```
+console.log(biggestCountry);
 
 // 7. Using the above countries array, find the country containing only 5 characters.
-
+ let lengthFive= new Array();
+ for (const country of countries) {
+    if (country.length == 5){
+      lengthFive.push(country);
+    }
+ }
+ console.log(lengthFive);
 //     ```sh
 //     ['Japan', 'Kenya']
 //     ```
