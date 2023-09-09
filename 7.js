@@ -3,17 +3,69 @@
 // ### Exercises: Level 1
 
 // 1. Declare a function _fullName_ and it print out your full name.
+function fullName(name) {
+  console.log(name);
+}
+fullName("Guilherme dos Santos");
 // 2. Declare a function _fullName_ and now it takes firstName, lastName as a parameter and it returns your full - name.
+function _fullName(firstName, lastName) {
+  return firstName + lastName;
+}
+console.log(_fullName("Guilherme", " Santos"));
+
 // 3. Declare a function _addNumbers_ and it takes two two parameters and it returns sum.
+function _addNumbers_(a, b) {
+  return a + b;
+}
+console.log(_addNumbers_(1, 2));
 // 4. An area of a rectangle is calculated as follows: _area = length x width_. Write a function which calculates _areaOfRectangle_.
+function _areaOfRectangle_(height, width) {
+  return height * width;
+}
+console.log(_areaOfRectangle_(2, 2));
 // 5. A perimeter of a rectangle is calculated as follows: _perimeter= 2x(length + width)_. Write a function which calculates _perimeterOfRectangle_.
+function _perimeterOfRectangle_(width, height) {
+  return 2 * width + 2 * height;
+}
+console.log(_perimeterOfRectangle_(2, 2));
 // 6. A volume of a rectangular prism is calculated as follows: _volume = length x width x height_. Write a function which calculates _volumeOfRectPrism_.
+function _volumeOfRectPrism_(width, height, length) {
+  return width * height * length;
+}
+console.log(_volumeOfRectPrism_(2, 2, 2));
 // 7. Area of a circle is calculated as follows: _area = π x r x r_. Write a function which calculates _areaOfCircle_
+function _areaOfCircle_(r) {
+  return Math.round(Math.PI * r * r);
+}
+console.log(_areaOfCircle_(3));
+
 // 8. Circumference of a circle is calculated as follows: _circumference = 2πr_. Write a function which calculates _circumOfCircle_
+function _circumOfCircle_(r) {
+  return Math.round(2 * r * Math.PI);
+}
+console.log(_circumOfCircle_(3));
 // 9. Density of a substance is calculated as follows:_density= mass/volume_. Write a function which calculates _density_.
+function _density_(mass, volume) {
+  return mass / volume;
+}
+console.log(_density_(100, 28));
 // 10. Speed is calculated by dividing the total distance covered by a moving object divided by the total amount of time taken. Write a function which calculates a speed of a moving object, _speed_.
+function _speed_(distance, time) {
+  return distance / time;
+}
+console.log("Speed " + _speed_(1000, 60));
 // 11. Weight of a substance is calculated as follows: _weight = mass x gravity_. Write a function which calculates _weight_.
+function _weight_(mass, gravity) {
+  return mass * gravity;
+}
+console.log("Weight " + _weight_(50, 10));
 // 12. Temperature in oC can be converted to oF using this formula: _oF = (oC x 9/5) + 32_. Write a function which convert oC to oF _convertCelsiusToFahrenheit_.
+function _convertCelsiusToFahrenheit_(celsius) {
+  return celsius * (9 / 5) + 32;
+}
+console.log(
+  `0 Celsius is equal to ` + _convertCelsiusToFahrenheit_(0) + " Fahrenheit"
+);
 // 13. Body mass index(BMI) is calculated as follows: _bmi = weight in Kg / (height x height) in m2_. Write a function which calculates _bmi_. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is _underweight, normal, overweight_ or _obese_ based the information given below.
 
 //     - The same groups apply to both men and women.
@@ -31,7 +83,7 @@
 //     console.log(findMax(0, -10, -2))
 //     0
 //     ```
-  
+
 // ### Exercises: Level 2
 
 // 1. Linear equation is calculated as follows: _ax + by + c = 0_. Write a function which calculates value of a linear equation, _solveLinEquation_.
