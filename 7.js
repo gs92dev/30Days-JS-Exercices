@@ -67,6 +67,25 @@ console.log(
   `0 Celsius is equal to ` + _convertCelsiusToFahrenheit_(0) + " Fahrenheit"
 );
 // 13. Body mass index(BMI) is calculated as follows: _bmi = weight in Kg / (height x height) in m2_. Write a function which calculates _bmi_. BMI is used to broadly define different weight groups in adults 20 years old or older.Check if a person is _underweight, normal, overweight_ or _obese_ based the information given below.
+function BMI(weight, height) {
+  let bmi = weight / (height * height);
+  switch (true) {
+    case bmi > 30:
+      console.log(bmi + " Your are obese");
+      break;
+    case bmi > 25:
+      console.log(bmi + " Overweight");
+      break;
+    case bmi > 18.5:
+      console.log(bmi + " Normal weight");
+      break;
+
+    default:
+      console.log(bmi + " Underweight");
+      break;
+  }
+}
+BMI(70, 1.7);
 
 //     - The same groups apply to both men and women.
 //     - _Underweight_: BMI is less than 18.5
@@ -75,14 +94,25 @@ console.log(
 //     - _Obese_: BMI is 30 or more
 
 // 14. Write a function called _checkSeason_, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+function _checkSeason_(month) {
+  switch (true) {
+    case month == "december" ||
+      month == "january" ||
+      month == "february" ||
+      month == "march":
+      console.log("Winter");
+      break;
+    default:
+      console.log("Spring");
+  }
+}
+_checkSeason_("februa");
 // 15. Math.max returns its largest argument. Write a function findMax that takes three arguments and returns their maximum with out using Math.max method.
-
-//     ```js
-//     console.log(findMax(0, 10, 5))
-//     10
-//     console.log(findMax(0, -10, -2))
-//     0
-//     ```
+function findMax(a, b, c) {
+  return Math.max(a, b, c);
+}
+console.log(findMax(0, 10, 5));
+console.log(findMax(0, -10, -2))
 
 // ### Exercises: Level 2
 
