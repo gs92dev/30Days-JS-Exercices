@@ -112,24 +112,28 @@ function findMax(a, b, c) {
   return Math.max(a, b, c);
 }
 console.log(findMax(0, 10, 5));
-console.log(findMax(0, -10, -2))
+console.log(findMax(0, -10, -2));
 
 // ### Exercises: Level 2
 
 // 1. Linear equation is calculated as follows: _ax + by + c = 0_. Write a function which calculates value of a linear equation, _solveLinEquation_.
- 
-// 2. Quadratic equation is calculated as follows: _ax2 + bx + c = 0_. Write a function which calculates value or values of a quadratic equation, _solveQuadEquation_.
-const solveQuadEquation = (a,b,c)=>{
-  let delta = (b*b)-(4*a*c);
-  console.log("Delta is: "+delta);
-  let bhaskara;
-  if (delta===0){
-    bhaskara = -b/2*a;
-    return bhaskara;
-  }
-}
-console.log(solveQuadEquation(1,4,4))
 
+// 2. Quadratic equation is calculated as follows: _ax2 + bx + c = 0_. Write a function which calculates value or values of a quadratic equation, _solveQuadEquation_.
+const solveQuadEquation = (a, b, c) => {
+  let delta = b * b - 4 * a * c;
+  console.log("Delta is: " + delta);
+  let bhaskara;
+  let bhaskaraarray = new Array();
+  if (delta === 0) {
+    bhaskara = (-b / 2) * a;
+    return bhaskara;
+  } else {
+    bhaskaraarray.push(((-b + Math.sqrt(delta)) / 2) * a);
+    bhaskaraarray.push(((-b - Math.sqrt(delta)) / 2) * a);
+    return bhaskaraarray;
+  }
+};
+console.log(solveQuadEquation(1, -1, 0));
 
 //     ```js
 //     console.log(solveQuadratic()) // {0}
@@ -141,14 +145,30 @@ console.log(solveQuadEquation(1,4,4))
 //     ```
 
 // 3. Declare a function name _printArray_. It takes array as a parameter and it prints out each value of the array.
+function printArray(array) {
+  array.forEach((element) => {
+    console.log(element);
+  });
+}
+printArray([1, 2, "Guilherme"]);
 // 4. Write a function name _showDateTime_ which shows time in this format: 08/01/2020 04:08 using the Date object.
-
+let showDateTime = () => {
+  console.log(new Date().toLocaleDateString());
+};
+showDateTime();
 //     ```sh
 //     showDateTime()
 //     08/01/2020 04:08
 //     ```
 
 // 5. Declare a function name _swapValues_. This function swaps value of x to y.
+function _swapValues(x, y) {
+  let z = x;
+  x = y;
+  y = z;
+  console.log("swapped" + x + y);
+}
+_swapValues(1, 2);
 
 //     ```js
 //     swapValues(3, 4) // x => 4, y=>3
