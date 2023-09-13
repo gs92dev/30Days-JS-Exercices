@@ -116,8 +116,6 @@ console.log(findMax(0, -10, -2));
 
 // ### Exercises: Level 2
 
-// 1. Linear equation is calculated as follows: _ax + by + c = 0_. Write a function which calculates value of a linear equation, _solveLinEquation_.
-
 // 2. Quadratic equation is calculated as follows: _ax2 + bx + c = 0_. Write a function which calculates value or values of a quadratic equation, _solveQuadEquation_.
 const solveQuadEquation = (a, b, c) => {
   let delta = b * b - 4 * a * c;
@@ -177,6 +175,15 @@ _swapValues(1, 2);
 
 // 6. Declare a function name _reverseArray_. It takes array as a parameter and it returns the reverse of the array (don't use method).
 
+const array = [1, 2, 3, 4, 5];
+
+for (let i = 0, j = array.length - 1; i < j; i++, j--) {
+  const temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+}
+
+console.log(array);
 //     ```js
 //     console.log(reverseArray([1, 2, 3, 4, 5]))
 //     //[5, 4, 3, 2, 1]
@@ -185,6 +192,13 @@ _swapValues(1, 2);
 //     ```
 
 // 7. Declare a function name _capitalizeArray_. It takes array as a parameter and it returns the - capitalizedarray.
+function _capitalizeArray_(arr) {
+  for (let index = 0; index < arr.length; index++) {
+    arr[index] = arr[index].toUpperCase();
+  }
+  return arr;
+}
+console.log(_capitalizeArray_(["guilherme", "santos"]));
 // 8. Declare a function name _addItem_. It takes an item parameter and it returns an array after adding the item
 // 9. Declare a function name _removeItem_. It takes an index parameter and it returns an array after removing an item
 // 10. Declare a function name _sumOfNumbers_. It takes a number parameter and it adds all the numbers in that range.
