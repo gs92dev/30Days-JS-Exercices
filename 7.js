@@ -200,12 +200,62 @@ function _capitalizeArray_(arr) {
 }
 console.log(_capitalizeArray_(["guilherme", "santos"]));
 // 8. Declare a function name _addItem_. It takes an item parameter and it returns an array after adding the item
+let addingItem = function (item) {
+  return [item];
+};
+console.log(addingItem("Item"));
 // 9. Declare a function name _removeItem_. It takes an index parameter and it returns an array after removing an item
+let removArr = ["Guilherme", 1, "Santos", "Daniel", 2, "Weller"];
+function _removeItem_(index) {
+  removArr.splice(index, 1);
+  return removArr;
+}
+console.log(_removeItem_(2));
 // 10. Declare a function name _sumOfNumbers_. It takes a number parameter and it adds all the numbers in that range.
+function _sumOfNumbers_(n1, n2) {
+  let sum = 0;
+  for (var i = n1; i <= n2; i++) {
+    sum = sum + i;
+  }
+  return sum;
+}
+console.log(_sumOfNumbers_(1, 10));
 // 11. Declare a function name _sumOfOdds_. It takes a number parameter and it adds all the odd numbers in that - range.
+function _sumOfOdds_(number) {
+  let summ = 0;
+  for (let i = 0; i <= number; i++) {
+    if (i % 2 == !0) {
+      summ += i;
+    }
+  }
+  return summ;
+}
+console.log(_sumOfOdds_(6));
 // 12. Declare a function name _sumOfEven_. It takes a number parameter and it adds all the even numbers in that - range.
+function _sumOfEven_(number) {
+  let summ = 0;
+  for (let i = 0; i <= number; i++) {
+    if (i % 2 == 0) {
+      summ += i;
+    }
+  }
+  return summ;
+}
+console.log(_sumOfEven_(4));
 // 13. Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
-
+function evensAndOdds(number) {
+  let odds = 0;
+  let evens = 0;
+  for (let i = 0; i <= number; i++) {
+    if (i % 2 == 0) {
+      evens = evens + 1;
+    } else {
+      odds = odds + 1;
+    }
+  }
+  return `There are ${evens} even numbers and  ${odds} odd numbers`;
+}
+console.log(evensAndOdds(50));
 //     ```sh
 //     evensAndOdds(100);
 //     The number of odds are 50.
@@ -213,7 +263,14 @@ console.log(_capitalizeArray_(["guilherme", "santos"]));
 //     ```
 
 // 14. Write a function which takes any number of arguments and return the sum of the arguments
-
+function sumArgs() {
+  let sum = 0;
+  for (var i = 0; i < arguments.length; i++) {
+    sum = sum + arguments[i];
+  }
+  return `The sum of all arguments is ${sum}`;
+}
+console.log(sumArgs(1, 2, 3));
 //     ```js
 //     sum(1, 2, 3) // -> 6
 //     sum(1, 2, 3, 4) // -> 10
