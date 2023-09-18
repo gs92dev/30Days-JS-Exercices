@@ -381,7 +381,14 @@ console.log(sumArgs(1, 2, 3));
 //     ```
 
 // 20. Write a function called reverseCountries, it takes countries array and first it copy the array and returns the reverse of the original array
-
+function reverseCountries(arr){
+  let reverseArr=(arr.reverse());
+  console.log(arr);
+  console.log(reverseArr);
+  return reverseArr;
+}
+let countries= ["Brasil","Jamaica","Korea","United States"]
+reverseCountries(countries);
 // 🎉 CONGRATULATIONS ! 🎉
 
 // [<< Day 6](../06_Day_Loops/06_day_loops.md) | [Day 8 >>](../08_Day_Objects/08_day_objects.md)
