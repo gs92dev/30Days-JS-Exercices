@@ -326,6 +326,18 @@ console.log(sumArgs(1, 2, 3));
 
 // 3. Write a function **_arrayOfHexaColors_** which return any number of hexadecimal colors in an array.
 // 4. Write a function **_arrayOfRgbColors_** which return any number of RGB colors in an array.
+function radomRgbColorGenerator(){
+  let arrayOfColors = new Array();
+  let ramdom = Math.random()*20;
+  for (let i = 0; i < ramdom; i++){
+    let generate = function(){ return Math.ceil(Math.random()*255)}
+    arrayOfColors.push(`rgb(${generate()},${generate()},${generate()})`);
+  }
+
+  
+  return arrayOfColors
+}
+console.log(radomRgbColorGenerator())
 // 5. Write a function **_convertHexaToRgb_** which converts hexa color to rgb and it returns an rgb color.
 // 6. Write a function **_convertRgbToHexa_** which converts rgb to hexa color and it returns an hexa color.
 // 7. Write a function **_generateColors_** which can generate any number of hexa or rgb colors.
