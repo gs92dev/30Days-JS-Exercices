@@ -351,8 +351,19 @@ console.log(radomRgbColorGenerator())
 
 // 8. Call your function _shuffleArray_, it takes an array as a parameter and it returns a shuffled array
 // 9. Call your function _factorial_, it takes a whole number as a parameter and it return a factorial of the number
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  } else {
+    
+ 
+    return result = n * factorial(n - 1);
+  }
+}
+console.log( factorial(5))
 // 10. Call your function _isEmpty_, it takes a parameter and it checks if it is empty or not
-// 11. Call your function _sum_, it takes any number of arguments and it returns the sum.
+
+
 // 12. Write a function called _sumOfArrayItems_, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
 // 13. Write a function called _average_, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
 // 14. Write a function called _modifyArray_ takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
