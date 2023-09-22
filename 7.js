@@ -362,7 +362,12 @@ function factorial(n) {
 }
 console.log( factorial(5))
 // 10. Call your function _isEmpty_, it takes a parameter and it checks if it is empty or not
-
+function _isEmpty_(n) {
+  if (n===" "){
+    return "empty"
+  }else{return "Not empty"}
+}
+console.log(_isEmpty_(undefined))
 
 // 12. Write a function called _sumOfArrayItems_, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
 // 13. Write a function called _average_, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
