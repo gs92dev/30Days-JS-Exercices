@@ -315,29 +315,31 @@ console.log(sumArgs(1, 2, 3));
 
 // 2. Write a function name _rgbColorGenerator_ and it generates rgb colors.
 
-
-    function rgbColorGenerator(){
-      let generate = function(){ return Math.ceil(Math.random()*255)}
-      return `rgb(${generate()},${generate()},${generate()})`
-    }
-    console.log(rgbColorGenerator())
+function rgbColorGenerator() {
+  let generate = function () {
+    return Math.ceil(Math.random() * 255);
+  };
+  return `rgb(${generate()},${generate()},${generate()})`;
+}
+console.log(rgbColorGenerator());
 //     rgb(125,244,255)
 //     ```
 
 // 3. Write a function **_arrayOfHexaColors_** which return any number of hexadecimal colors in an array.
 // 4. Write a function **_arrayOfRgbColors_** which return any number of RGB colors in an array.
-function radomRgbColorGenerator(){
+function radomRgbColorGenerator() {
   let arrayOfColors = new Array();
-  let ramdom = Math.random()*20;
-  for (let i = 0; i < ramdom; i++){
-    let generate = function(){ return Math.ceil(Math.random()*255)}
+  let ramdom = Math.random() * 20;
+  for (let i = 0; i < ramdom; i++) {
+    let generate = function () {
+      return Math.ceil(Math.random() * 255);
+    };
     arrayOfColors.push(`rgb(${generate()},${generate()},${generate()})`);
   }
 
-  
-  return arrayOfColors
+  return arrayOfColors;
 }
-console.log(radomRgbColorGenerator())
+console.log(radomRgbColorGenerator());
 // 5. Write a function **_convertHexaToRgb_** which converts hexa color to rgb and it returns an rgb color.
 // 6. Write a function **_convertRgbToHexa_** which converts rgb to hexa color and it returns an hexa color.
 // 7. Write a function **_generateColors_** which can generate any number of hexa or rgb colors.
@@ -355,50 +357,39 @@ function factorial(n) {
   if (n === 0) {
     return 1;
   } else {
-    
- 
-    return result = n * factorial(n - 1);
+    return (result = n * factorial(n - 1));
   }
 }
-console.log( factorial(5))
+console.log(factorial(5));
 // 10. Call your function _isEmpty_, it takes a parameter and it checks if it is empty or not
 function _isEmpty_(n) {
-  if (n===" "){
-    return "empty"
-  }else{return "Not empty"}
+  if (n === " ") {
+    return "empty";
+  } else {
+    return "Not empty";
+  }
 }
-console.log(_isEmpty_(undefined))
+console.log(_isEmpty_(undefined));
 
 // 12. Write a function called _sumOfArrayItems_, it takes an array parameter and return the sum of all the items. Check if all the array items are number types. If not give return reasonable feedback.
 // 13. Write a function called _average_, it takes an array parameter and returns the average of the items. Check if all the array items are number types. If not give return reasonable feedback.
 // 14. Write a function called _modifyArray_ takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
+let arr = ["Guilherme", "brasil", "santos,", "hoje", "amanha", "ontem"];
+const modifyArray = (arr) => {
+  if (arr.length < 5) {
+    return "item not found";
+  }
+  arr[4]=arr[4].toUpperCase();
+  return arr;
+};
+console.log(modifyArray(arr));
 
-//     ```js
-//     console.log(modifyArray(['Avocado', 'Tomato', 'Potato','Mango', 'Lemon','Carrot']);
-//     ```
 
-//     ```sh
-//     ['Avocado', 'Tomato', 'Potato','Mango', 'LEMON', 'Carrot']
-//     ```
-
-//     ```js
-//     console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon','Microsoft',  'IBM']);
-//     ```
-
-//     ```sh
-//     ['Google', 'Facebook','Apple', 'Amazon','MICROSOFT',  'IBM']
-//     ```
-
-//     ```js
-//     console.log(modifyArray(['Google', 'Facebook','Apple', 'Amazon']);
-//     ```
-
-//     ```sh
-//       'Not Found'
-//     ```
-
-// 15. Write a function called _isPrime_, which checks if a number is prime number.
 // 16. Write a functions which checks if all items are unique in the array.
+  function checkUnique(arr) {
+    for(var i = 0; i < arr.length; i++) {
+      
+  }
 // 17. Write a function which checks if all the items of the array are the same data type.
 // 18. JavaScript variable name does not support special characters or symbols except \$ or \_. Write a function **isValidVariable** which check if a variable is valid or invalid variable.
 // 19. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
@@ -409,13 +400,13 @@ console.log(_isEmpty_(undefined))
 //     ```
 
 // 20. Write a function called reverseCountries, it takes countries array and first it copy the array and returns the reverse of the original array
-function reverseCountries(arr){
-  let reverseArr=(arr.reverse());
+function reverseCountries(arr) {
+  let reverseArr = arr.reverse();
   console.log(arr);
   console.log(reverseArr);
   return reverseArr;
 }
-let countries= ["Brasil","Jamaica","Korea","United States"]
+let countries = ["Brasil", "Jamaica", "Korea", "United States"];
 reverseCountries(countries);
 // 🎉 CONGRATULATIONS ! 🎉
 
