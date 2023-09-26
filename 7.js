@@ -379,18 +379,30 @@ const modifyArray = (arr) => {
   if (arr.length < 5) {
     return "item not found";
   }
-  arr[4]=arr[4].toUpperCase();
+  arr[4] = arr[4].toUpperCase();
   return arr;
 };
 console.log(modifyArray(arr));
 
-
 // 16. Write a functions which checks if all items are unique in the array.
-  function checkUnique(arr) {
-    for(var i = 0; i < arr.length; i++) {
+function checkUnique(arr) {
+  for (var i = 0; i < arr.length; i++) {
+    for (let index = arr.length; index >=0; index--) {
+      if (arr[i]===arr[index]){
+
+      }
       
+    }
   }
+}
 // 17. Write a function which checks if all the items of the array are the same data type.
+
+function checkArr(array){
+  for (let index = 0; index < array.length; index++) {
+    
+    
+  }
+}
 // 18. JavaScript variable name does not support special characters or symbols except \$ or \_. Write a function **isValidVariable** which check if a variable is valid or invalid variable.
 // 19. Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
 
