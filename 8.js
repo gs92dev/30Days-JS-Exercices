@@ -4,12 +4,36 @@
 
 // 1. Create an empty object called dog
 const dog = new Object();
-// 1. Print the the dog object on the console
+// 2. Print the the dog object on the console
 console.log(dog);
-// 1. Add name, legs, color, age and bark properties for the dog object. The bark property is a method which return _woof woof_
+// 3. Add name, legs, color, age and bark properties for the dog object. The bark property is a method which return _woof woof_
+dog.name = "dog";
+dog.legs = 4;
+dog.color = "caramelo";
+dog.age = 8;
+dog.bark = () => {
+  console.log("Au au au");
+};
+dog.bark();
+// 4. Get name, legs, color, age and bark value from the dog object
+dog.getName = function () {
+  console.log(this.name);
+};
+dog.getName();
 
-// 1. Get name, legs, color, age and bark value from the dog object
-// 1. Set new properties the dog object: breed, getDogInfo
+// 5. Set new properties the dog object: breed, getDogInfo
+dog.breed = "Vira Lata";
+dog.getDogInfo = function () {
+    console.log(this.name,
+        this.breed,
+        this.age,
+        this.bark(),
+        this.legs,
+        this.color
+    );
+  };
+    
+dog.getDogInfo();
 // ### Exercises: Level 2
 
 // 1. Find the person who has many skills in the users object.
@@ -155,15 +179,14 @@ console.log(dog);
 //   ```
 
 //   Imagine you are getting the above users collection from a MongoDB database.
-//     a. Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account.  
-//     b. Create a function called signIn which allows user to sign in to the application  
+//     a. Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account.
+//     b. Create a function called signIn which allows user to sign in to the application
 
 // 3. The products array has three elements and each of them has six properties.
 //     a. Create a function called rateProduct which rates the product
-//     b. Create a function called averageRating which calculate the average rating of a product  
+//     b. Create a function called averageRating which calculate the average rating of a product
 
 // 4. Create a function called likeProduct. This function will helps to like to the product if it is not liked and remove like if it was liked.
-
 
 // 🎉 CONGRATULATIONS ! 🎉
 
