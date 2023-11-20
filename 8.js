@@ -24,15 +24,16 @@ dog.getName();
 // 5. Set new properties the dog object: breed, getDogInfo
 dog.breed = "Vira Lata";
 dog.getDogInfo = function () {
-    console.log(this.name,
-        this.breed,
-        this.age,
-        this.bark(),
-        this.legs,
-        this.color
-    );
-  };
-    
+  console.log(
+    this.name,
+    this.breed,
+    this.age,
+    this.bark(),
+    this.legs,
+    this.color
+  );
+};
+
 dog.getDogInfo();
 // ### Exercises: Level 2
 
