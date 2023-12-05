@@ -92,20 +92,14 @@ dog.getDogInfo();
        points: 40
      }
    }
-  //  console.log(users);
-  //  let count = 0;
-  //  for (const key in users) {
-  //   const value = key[points];
-  //   console.log(value);
-  //   // do something with key and value
-  // }
-  const object1 = {
-    a: 'somestring',
-    b: 42,
-  };
-  
-  for (const [key, value] of Object.entries(object1)) {
-    console.log(`${key}: ${value}`);
+
+  let count = 0;
+  for (const [key, value] of Object.entries(users)) {
+    console.log(`${key}: ${value.points}`);
+    if(value.points >= 50){
+      count = count + 1;      
+    }
+    console.log(count)
   }
 
 // 1. Find people who are MERN stack developer from the users object
