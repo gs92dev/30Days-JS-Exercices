@@ -130,10 +130,15 @@ console.log(Object.keys(users));
 // 1. Get all the values of users object
 console.log(Object.values(users));
 // 1. Use the countries object to print a country name, capital, populations and languages.
+console.log(Object.values(users["Guilherme"]));
 
 // ### Exercises: Level 3
 
 // 1. Create an object literal called _personAccount_. It has _firstName, lastName, incomes, expenses_ properties and it has _totalIncome, totalExpense, accountInfo,addIncome, addExpense_ and _accountBalance_ methods. Incomes is a set of incomes and its description and expenses is a set of incomes and its description.
+
+
+
+
 // 2. **** Questions:2, 3 and 4 are based on the following two arrays:users and products ()
 
 //   ```js
