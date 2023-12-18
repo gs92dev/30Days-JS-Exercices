@@ -135,6 +135,34 @@ console.log(Object.values(users["Guilherme"]));
 // ### Exercises: Level 3
 
 // 1. Create an object literal called _personAccount_. It has _firstName, lastName, incomes, expenses_ properties and it has _totalIncome, totalExpense, accountInfo,addIncome, addExpense_ and _accountBalance_ methods. Incomes is a set of incomes and its description and expenses is a set of incomes and its description.
+const personAccount = {
+  firstName: "",
+  lastName: "",
+  incomes: [],
+  expenses: [],
+  totalIncome: 0,
+  totalExpense: 0,
+  accountInfo: function () {
+    console.log(this.firstName, this.lastName, this.totalIncome, this.totalExpense);
+  },
+  addIncome: function (income, description) {
+    this.incomes.push({
+      income: income,
+      description: description,
+    });
+    this.totalIncome = this.totalIncome + income;
+  },
+  addExpense: function (expense, description) {
+    this.expenses.push({
+      expense: expense,
+      description: description,
+    });
+    this.totalExpense = this.totalExpense + expense;
+  },
+  accountBalance: function () {
+    console.log(this.totalIncome - this.totalExpense);
+  },
+}
 
 
 
